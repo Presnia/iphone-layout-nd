@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ];
 
         const deactivate = () => {
-            cardDetailChangeElems.forEach(btn => btn.classList.remove('active'))
+            cardDetailChangeElems.forEach(btn => btn.classList.remove('active'));
         }
 
         cardDetailChangeElems.forEach((btn, i) => {
