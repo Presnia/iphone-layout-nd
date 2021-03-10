@@ -45,10 +45,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     cardDetailsPriceElem.textContent = data[i].price + '₽'; 
                     descriptionMemory.textContent = `Встроенная память (ROM) ${data[i].memoryROM} ГБ`
                 }
-            })
-        })
+            });
+        });
+    };
+
+    const accordion = () => {
+        const charachteristicsTitle = document.querySelectorAll('.characteristics__title');
+        const characteristicsDescription = document.querySelectorAll('.characteristics__description');
+
+        charachteristicsTitle.forEach((elem, i) => {
+            elem.addEventListener('click', () => {
+                elem.classList.toggle('active');
+                characteristicsDescription[i].classList.toggle('active');
+            });
+        });
     };
 
 
     tabs();
+    accordion();
 });
