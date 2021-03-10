@@ -84,6 +84,13 @@ document.addEventListener('DOMContentLoaded', () => {
                             open(target, description);
             }
         });
+
+        document.body.addEventListener('click', (event) => {
+            const target = event.target;
+            if(!target.closest('.characteristics__list')) {
+                closeAllDrops();
+            }
+        })
     };
 
 
